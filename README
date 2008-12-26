@@ -9,6 +9,3 @@ book/   - Textos do livro.  No formato maruku's markdown.
 images/ - Imagens, Diagramas, Imagens legais
 source/ - Alguns códigos de exemplo para ser incluso no livro
 
-Sinatra URL:
-http://sinatrarb.com
-
