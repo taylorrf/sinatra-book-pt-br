@@ -1,0 +1,14 @@
+Documentação do "livro" para o Web Framework Sinatra.
+Isto irá servir mais provavelmente como um "livro" no estilo receitas de bolo, mais linear, juntamente com um tutorial para você começar.
+
+
+Note que nada ainda foi muito bem escrito.  Junte-se a nós no IRC (irc.freenode.org #sinatra) se você quiser ajudar com alguma coisa.
+
+Layout dos arquivos:
+book/   - Textos do livro.  No formato maruku's markdown.
+images/ - Imagens, Diagramas, Imagens legais
+source/ - Alguns códigos de exemplo para ser incluso no livro
+
+Sinatra URL:
+http://sinatrarb.com
+
