@@ -1,16 +1,15 @@
 Sinatra Book
 ============
 
-Documentation in "book" form for the Sinatra Web Framework.
+Documentação do "livro" para o Web Framework Sinatra.
 
-About
+Sobre
 -----
+Isto provavelmente irá servir mais como um "livro" no estilo receitas de bolo, mais linear, juntamente com um tutorial para você começar.
 
-It'll probably be cookbook style recipes, along with a more linear tutorial to get you started.
+Junte-se a nós no IRC (irc.freenode.org #sinatra) se você quiser ajudar com alguma coisa.
 
-Join us on IRC (#sinatra at irc.freenode.org) if you need help with anything.
-
-File Layout:
+Layout dos arquivos:
 
 * _book_   - Text of the book.  In maruku's markdown format.
 * _images_ - Images, Diagrams, Funny Pictures
@@ -19,10 +18,10 @@ File Layout:
 Learn more about Sinatra at [http://github.com/bmizerany/sinatra](http://github.com/bmizerany/sinatra).
 
 
-How to build the Book
+Como gerar o livro
 ---------------------
 
-You need following gems to build the book:
+Você irá precisar da seguinte gem para gerar o livro:
 
     sudo gem install thor maruku
 
