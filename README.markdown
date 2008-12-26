@@ -13,7 +13,7 @@ Layout dos arquivos:
 * _images_ - Diagramas e Imagens legais em geral
 * _source_ - Alguns arquivos fontes para serem incluidos no livro
 
-Aprenda mais sobre Sinatra acessando o repositório oficial [http://github.com/bmizerany/sinatra](http://github.com/bmizerany/sinatra).
+Aprenda um pouco mais sobre Sinatra acessando o repositório oficial [http://github.com/bmizerany/sinatra](http://github.com/bmizerany/sinatra).
 
 
 Como gerar o livro
