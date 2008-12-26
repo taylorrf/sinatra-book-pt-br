@@ -41,11 +41,9 @@ A versão online com as últimas traduções para o português pode ser acessada
 
 
 Caso quiser contribuir com o projeto em inglês, siga as seguintes instruções:
-
 [sinatra-book/wikis/how-to-contribute](http://github.com/cschneid/sinatra-book/wikis/how-to-contribute)
 
 O Sinatra-Book com a versão em inglês pode ser acessado no seguinte link:
-
 [sinatra.rubyforge.org/book.html](http://sinatra.rubyforge.org/book.html)
 
 
