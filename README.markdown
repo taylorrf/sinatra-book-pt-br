@@ -34,15 +34,18 @@ Todos podem participar.
 
 Para revisões de tradução ou tradução de novos capitulos faça um fork deste repositório e submeta sua contribuição.
 
-A versão online com as últimas traduções para o português pode ser acessada no seguinte link:[sinatra.tailorfontela.com.br](http://sinatra.tailorfontela.com.br)
+A versão online com as últimas traduções para o português pode ser acessada no seguinte link:
+[sinatra.tailorfontela.com.br](http://sinatra.tailorfontela.com.br)
 
 
 
 
 Caso quiser contribuir com o projeto em inglês, siga as seguintes instruções:
+
 [sinatra-book/wikis/how-to-contribute](http://github.com/cschneid/sinatra-book/wikis/how-to-contribute)
 
 O Sinatra-Book com a versão em inglês pode ser acessado no seguinte link:
+
 [sinatra.rubyforge.org/book.html](http://sinatra.rubyforge.org/book.html)
 
 
