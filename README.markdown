@@ -9,9 +9,9 @@ Este "livro" provavelmente irá lhe servir mais como um guia no estilo receitas 
 
 Layout dos arquivos:
 
-* _book_   - Text of the book.  In maruku's markdown format.
-* _images_ - Images, Diagrams, Funny Pictures
-* _source_ - Any source examples to be included into the book
+* _book_   - Textos do livros.  No formato maruku's markdown.
+* _images_ - Diagramas e Imagens legais em geral
+* _source_ - Alguns arquivos fontes para serem incluidos no livro
 
 Aprenda mais sobre Sinatra acessando o repositório oficial [http://github.com/bmizerany/sinatra](http://github.com/bmizerany/sinatra).
 
