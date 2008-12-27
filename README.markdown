@@ -32,9 +32,9 @@ Como contribuir
 -----------------
 Todos podem participar.
 
-Para revisões de tradução ou tradução de novos capitulos faça um fork deste repositório e submeta sua contribuição.
+Para revisões ou traduções de capitulos faça um fork deste repositório e submeta sua contribuição. Serão aceitos também capitulos adicionais, visto que alguns assuntos ainda não estão sendo cobertos por esta versão do livro.
 
-A versão online com as últimas traduções para o português pode ser acessada no seguinte link:
+A versão online em português esta disponível em:
 [sinatra.tailorfontela.com.br](http://sinatra.tailorfontela.com.br)
 
 
@@ -43,8 +43,8 @@ A versão online com as últimas traduções para o português pode ser acessada
 Caso quiser contribuir com o projeto em inglês, siga as seguintes instruções:
 [sinatra-book/wikis/how-to-contribute](http://github.com/cschneid/sinatra-book/wikis/how-to-contribute)
 
-O Sinatra-Book com a versão em inglês pode ser acessado no seguinte link:
+A versão online em inglês do livro esta disponível em:
 [sinatra.rubyforge.org/book.html](http://sinatra.rubyforge.org/book.html)
 
 
-Junte-se ao canal em inglês no IRC (irc.freenode.org #sinatra) se você quiser ajudar com alguma coisa ou quiser esclarecer dúvidas sobre Sinatra.
+Junte-se também ao canal em inglês no IRC (irc.freenode.org #sinatra) se você quiser ajudar com alguma coisa ou precisar esclarecer alguma dúvida sobre Sinatra.
