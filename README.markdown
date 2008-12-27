@@ -47,7 +47,7 @@ A versão online em inglês do livro esta disponível em:
 
 
 
-Caso quiser contribuir com o projeto em inglês, visite-o e siga as seguintes instruções no seguinte endereço:
+Caso queira contribuir com o projeto em inglês, visite-o e siga as devidas instruções no seguinte endereço:
 [http://github.com/cschneid/sinatra-book/tree/master](http://github.com/cschneid/sinatra-book/tree/master)
 
 
