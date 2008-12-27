@@ -39,12 +39,15 @@ A versão online em português esta disponível em:
 
 
 
+A versão online em inglês do livro esta disponível em:
+[sinatra.rubyforge.org/book.html](http://sinatra.rubyforge.org/book.html)
+
+
 
 Caso quiser contribuir com o projeto em inglês, siga as seguintes instruções:
 [sinatra-book/wikis/how-to-contribute](http://github.com/cschneid/sinatra-book/wikis/how-to-contribute)
 
-A versão online em inglês do livro esta disponível em:
-[sinatra.rubyforge.org/book.html](http://sinatra.rubyforge.org/book.html)
+
 
 
 Junte-se também ao canal em inglês no IRC (irc.freenode.org #sinatra) se você quiser ajudar com alguma coisa ou precisar esclarecer alguma dúvida sobre Sinatra.
