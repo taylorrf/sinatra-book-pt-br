@@ -3,12 +3,9 @@ Handlers
 
 Estrutura
 ---------
-Handler is the generic term that Sinatra uses for the "controllers".  A
-handler is the initial point of entry for new http requests into your
-application.
+Handler é um termo genérico utilizado pelo Sinatra para "controllers". Um handler é o ponto inicial de entrada para uma nova requisição http em sua aplicação.
 
-To find more about the routes, head to the Routes section (right above
-this one)
+Para saber mais sobre rotas, leia o capitúlo Rotas (logo acima deste)
 
 
 redirect

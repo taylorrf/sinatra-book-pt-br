@@ -63,7 +63,6 @@ Os outros métodos são requisitados exatamente da mesma forma como na rota "get
 
 os métodos PUT e DELETE
 --------------------------
-
 Quando os browsers não suportavam nativamente os métodos PUT e DELETE, alguns hacks ou workaround eram adotados pela comunidade web. Bastava adicionar um elemento hidden com o nome "metodo" e o valor igual ao método HTTP que você desejava usar. O formulário continuará sendo enviado como um POST, mas o Sinatra irá interpretá-lo com o método desejado.
 
 Quando você quiser usar PUT ou DELETE em um formulário com um cliente que não tem suporte (da mesma forma como Curl ou ActiveResorce), simplesmente vá em frente e use-os normalmente, ignorando aquele método citado acima. Aquilo é apenas para "hacks" em apoio aos browsers.
@@ -71,11 +70,6 @@ Quando você quiser usar PUT ou DELETE em um formulário com um cliente que não
 
 como as rotas são requisitadas
 ------------------------
-Each time you add a new route to your application, it gets compiled down into a
-regular expression that will match it.  That is stored in an array along with
-the handler block attached to that route.
+Cada vez que você adiciona uma nova rota na sua aplicação, é compilada uma nova expressão regular para verifica-lá. Isto é guardado em um array através de um handler que adiciona um bloco de código para cada rota.
 
-When a new request comes in, each regex is run in turn, until one matches.  Then
-the the handler (the code block) attached to that route gets executed.
-
-
+Quando é feita uma nova requisição, ela passa pela expressão regular que roda para verifica-lá. Então o handler (bloco de código) anexado para a rota é executado.

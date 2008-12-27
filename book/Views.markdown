@@ -39,7 +39,7 @@ Isto irá renderizar ./views/index.builder
 	get '/' do
 	  builder do |xml|
         xml.node do
-          xml.subnode "Inner text"
+          xml.subnode "Texto interno"
         end
       end
 	end
@@ -57,7 +57,7 @@ Layouts são muito simples no Sinatra. Crie um arquivo em seu diretório de view
 
 O layout pode ter no seu contexto um ponto onde é realizada uma chamada para incluir outros conteúdos.
 
-An example haml layout file could look something like this:
+Um exemplo de um layout com haml seria um arquivo parecido com isto:
 
     %html
       %head
@@ -92,7 +92,7 @@ Isto é uma fria:
 	X
 
 	@@ index
-	%div.title Hello world!!!!!
+	%div.title Olá Mundo!!!!!
 
 Experimente!
 

@@ -1,13 +1,13 @@
 Configuração
 =============
 
-Use Sinatra's "set" option
---------------------------
+Use as opções "setaveis" do Sinatra
+-----------------------------------
 
 
-external config file via the configure block
---------------------------------------------
+Arquivo de configuração externa através do bloco de configuração
+----------------------------------------------------------------
 
 
-Application module / config area
---------------------------------
+Módulo da aplicação / Área de configuração
+------------------------------------------

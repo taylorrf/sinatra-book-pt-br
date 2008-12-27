@@ -28,8 +28,8 @@ Rode isto com o seguinte comando $ ruby myapp.rb e visualize o resultado em http
 
 Vivendo com as novidades
 --------------------------------
-Looking to live life (or Sinatra I should say) on the edge, huh?  Well, it's rather simple.
-The latest greatest Sinatra is on Github; so using the power of git and the power of our minds--we can do the following
+Querendo viver a vida (ou deveria dizer Sinatra) com as novidades né? Bem, isto é bastante simples.
+As últimas grandes novidades do Sinatra estão no Github; então utilizando os poderes do git e os poderes da sua mente--você poderá fazer o seguinte
 
 1. cd local/do/seu/projeto
 2. git clone git://github.com/bmizerany/sinatra.git
@@ -38,7 +38,7 @@ The latest greatest Sinatra is on Github; so using the power of git and the powe
 5. cd seu\_projeto
 6. ln -s ../sinatra
 
-Para usar este poder profano, basta adicionar a seguinte linha no arquivo sinatra.rb
+Para utilizar este poder profano, basta adicionar a seguinte linha no arquivo sinatra.rb
 
 	$:.unshift File.dirname(__FILE__) + '/sinatra/lib'
 	require 'sinatra'

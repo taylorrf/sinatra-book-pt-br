@@ -4,19 +4,16 @@ Deployment
 Lighttpd Proxied to Thin        {#deployment_lighttpd}
 ------------------------
 
-This will cover how to deploy Sinatra to a load balanced reverse
-proxy setup using Lighttpd and Thin.
+Iremos cobrir aqui como realizar o deploy no Sinatra com suporte a proxy reverso e load balancing utilizando Lighttpd e Thin.
 
-1. Install Lighttpd and Thin
+1. Instalando Lighttpd e Thin
 
-        # Figure out lighttpd yourself, it should be handled by your
-        # linux distro's package manager
+        # Verifique se você já tem lighttpd, isto pode ser verificado através do gerenciado de pacotes da sua distribuição Linux
 
-        # For thin:
+        # Para o Thin:
         gem install thin
 
-2. Create your rackup file - the "require 'app'" line should require the actual
-   Sinatra app you have written.
+2. Crie seu arquivo de rackup - é necessarie que tenha a linha "require 'app'" da sua aplicação Sinatra.
 
         require 'app'
 
@@ -26,25 +23,24 @@ proxy setup using Lighttpd and Thin.
 
         run Sinatra.application
 
-3. Setup a config.yml - change the /path/to/my/app path to reflect reality.
+3. Configure o config.yml - mude o /local/da/minha/app para o diretório correto da sua aplicação.
 
         ---
             environment: production
-            chdir: /path/to/my/app
+            chdir: /local/da/minha/app
             address: 127.0.0.1
             user: root
             group: root
             port: 4567
-            pid: /path/to/my/app/thin.pid
-            rackup: /path/to/my/app/config.ru
-            log: /path/to/my/app/thin.log
+            pid: /local/da/minha/app/thin.pid
+            rackup: /local/da/minha/app/config.ru
+            log: /local/da/minha/app/thin.log
             max_conns: 1024
             timeout: 30
             max_persistent_conns: 512
             daemonize: true
 
-4. Setup lighttpd.conf - change mydomain to reflect reality. Also make
-   sure the first port here matches up with the port setting in config.yml.
+4. Configure o lighttpd.conf - troque "mydomain" pelo edereço correto. Também marque corretamente a porta primária conforme configurado no  config.yml.
 
          $HTTP["host"] =~ "(www\.)?mydomain\.com"  {
                  proxy.balance = "fair"
@@ -56,16 +52,14 @@ proxy setup using Lighttpd and Thin.
                                  )
          }
 
-5. Start thin and your application. I have a rake script so I can just
-   call "rake start" rather than typing this in.
+5. Inicie o thin e a sua aplicação. Eu criei um script que já faz isso
+   chamado de "rake start".
 
          thin -s 2 -C config.yml -R config.ru start
 
-You're done! Go to mydomain.com/ and see the result! Everything should be setup
-now, check it out at the domain you setup in your lighttpd.conf file.
+Esta feito! Va até o seu dominio "mydomain.com/" e veja o resultado! Tudo pode ser configurado agora, verifique também a configuração do seu dominio no seu arquivo lighttpd.conf.
 
-*Variation* - nginx via proxy - The same approach to proxying can be applied to
-the nginx web server
+*Variações* - nginx via proxy - O mesmo acesso do proxy pode ser aplicado ao web server nginx
 
 	upstream www_mydomain_com {
 		server 127.0.0.1:5000;
@@ -83,10 +77,9 @@ the nginx web server
 
 	}
 
-*Variation* - More Thin instances - To add more thin instances, change the
-`-s 2` parameter on the thin start command to be how ever many servers you want.
-Then be sure lighttpd proxies to all of them by adding more lines to the proxy
-statements. Then restart lighttpd and everything should come up as expected.
+*Variações* - Mais instâncias Thin - Para adicionar mais instâncias thin, mude o paramêtro `-s 2` no comando de inicialização do thin para a quantos servidores você deseja.
+Então nã se esqueça dos proxies lighttpd adicionando uma nova linha para cada um deles. Após reinicie o lighttpd e tudo irá subir conforme o esperado.
+
 
 
 Passenger (mod rails)           {#deployment_passenger}
