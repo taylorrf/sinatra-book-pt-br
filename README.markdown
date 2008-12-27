@@ -34,6 +34,9 @@ Todos podem participar.
 
 Para revisões ou traduções de capitulos faça um fork deste repositório e submeta sua contribuição. Serão aceitos também capitulos adicionais, visto que alguns assuntos ainda não estão sendo cobertos por esta versão do livro.
 
+Dúvidas ou sugestões sobre o projeto: (taylorrf@gmail.com)
+
+
 A versão online em português do livro esta disponível em:
 [sinatra.tailorfontela.com.br](http://sinatra.tailorfontela.com.br)
 
@@ -44,10 +47,10 @@ A versão online em inglês do livro esta disponível em:
 
 
 
-Caso quiser contribuir com o projeto em inglês, siga as seguintes instruções:
-[sinatra-book/wikis/how-to-contribute](http://github.com/cschneid/sinatra-book/wikis/how-to-contribute)
+Caso quiser contribuir com o projeto em inglês, visite-o e siga as seguintes instruções no seguinte endereço:
+[http://github.com/cschneid/sinatra-book/tree/master](http://github.com/cschneid/sinatra-book/tree/master)
 
 
 
 
-Junte-se também ao canal em inglês no IRC (irc.freenode.org #sinatra) se você quiser ajudar com alguma coisa ou precisar esclarecer alguma dúvida sobre Sinatra.
+Junte-se também ao canal em inglês no IRC (irc.freenode.org #sinatra) se você quiser ajudar em alguma coisa ou precisar esclarecer alguma dúvida sobre Sinatra.
