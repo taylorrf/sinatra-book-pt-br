@@ -34,7 +34,7 @@ Todos podem participar.
 
 Para revisões ou traduções de capitulos faça um fork deste repositório e submeta sua contribuição. Serão aceitos também capitulos adicionais, visto que alguns assuntos ainda não estão sendo cobertos por esta versão do livro.
 
-Dúvidas ou sugestões sobre o projeto: (taylorrf@gmail.com)
+Dúvidas ou sugestões sobre o projeto: [tailorfontela.com.br/contato](tailorfontela.com.br/contato)
 
 
 A versão online em português do livro esta disponível em:
