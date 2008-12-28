@@ -10,7 +10,7 @@ Para saber mais sobre rotas, leia o capitúlo Rotas (logo acima deste)
 
 redirect
 --------
-O helper redirect é um atalho para o código (302) de resposta http comun.
+O helper redirect é um atalho para o código (302) de resposta http comum.
 
 Basicamente é muito fácil:
 
@@ -20,42 +20,34 @@ Basicamente é muito fácil:
 
     redirect 'http://www.google.com'
 
-The redirect actually sends back a Location header to the browser, and the
-browser makes a followup request to the location indicated.  Since the browser
-makes that followup request, you can redirect to any page, in your application,
-or another site entirely.
+Atualmente o redirect envia de volta para o browser um Location header, e o browser faz a seguinte requisição para o local indicado. Desde que o browser faça a requisição seguinte, você pode redirecionar para outra página, em sua aplicação, ou totalmente para um outro site.
 
-The flow of requests during a redirect is:
+
+O fluxo de  requests durante um redirect é:
 Browser --> Server (redirect to '/') --> Browser (request '/') --> Server (result for '/')
 
-Sinatra sends a 302 response code as a redirect by default. According to the
-spec, 302 shouldn't change the request method, but you can see a note saying
-that most clients do change it. Apparently the mobile browser that person was
-using did things correctly (instead of the mainstream misinterpretation).
+Sinatra envia por padrão o código de resposta 302. Segundo o spec, 302 não pode alterar o método de requisição, mas você vê uma nota na maioria dos clientes dizendo que irá mudar isto. Aparentemente os browsers mobile que as pessoas estão usando fazem as coisas corretamente ( exceto a má interpretação do mainstream).
 
-The fix for this in the spec is 2 different response codes: 303
-and 307. 303 resets to GET, 307 keeps the same method.
 
-To force Sinatra to send a different response code, it's very simple:
+A solução disto no spec é enviar 2 diferentes códigos de resposta: 303 e  307. 303 reinicia o GET, 307 mantém o mesmo método.
 
-    redirect '/', 303 # forces the 303 return code
+Para forçar o sinatra a enviar um código de resposta diferente, é muito simples:
 
-    redirect '/', 307 # forces the 307 return code
+    redirect '/', 303 # força o retorno do código 303
 
-sessions
+    redirect '/', 307 # força o retorno do código 307
+
+sessões
 --------
 
-### Default Cookie Based Sessions
+### Padrão de Cookie baseado em Sessões
 
-Sinatra ships with basic support for cookie based sessions.  To enable it, in a configure block, or at the top of your application, you just need to enable to option.
+Sinatra possui um suporte básico para cookie baseado em sessão.  Para habilitar isto, no bloco de configuração, ou  no inicio da sua aplicação, você precisa habilitar esta opção.
 
     enable :sessions
 
-The downside to this session approach is that all the data is stored in the
-cookie.  Since cookies have a fairly hard limit of 4 kilobytes, you can't store
-much data.  The other issue is that the cookie is not tamper proof.  The user
-can change any data in their session.  But... it is easy, and it doesn't have
-the scaling problems that memory or database backed sessions run into.
+A desvantagem para esta abordagem com sessão é que todos os dados serão armazenados no cookie. Cookies sempre terão um limite de 4 kilobytes, você nao pode armazenar muitos dados. Por outro lado cookies não são inviolaveis. O usuário pode modificar qualquer dado na sua sessão. Mas.... é muito fácil, e não tem problemas de escalonamento de memória ou de banco de dados rodando de backend junto com a sessão.
+
 
 ### Memória baseada em sessões
 
@@ -69,9 +61,9 @@ the scaling problems that memory or database backed sessions run into.
 cookies
 -------
 
-Cookies are a fairly simple thing to use in Sinatra, but they have a few quirks.
+Cookies são bastante simples de se usar no Sinatra, porém com alguns trejeitos.
 
-Lets first look at the simple use case:
+Vamos primeiro olhar um simples caso de uso:
 
     require 'sinatra'
 

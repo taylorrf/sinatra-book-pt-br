@@ -54,10 +54,10 @@ user agent
 
 outros métodos
 -------------
-Os outros métodos são requisitados exatamente da mesma forma como na rota "get". Você simplesmente usa o "post", "put" ou "delete" que já estarão definidos como uma rota, além do "get" é claro. Para acessar os parametros POSTados, use params\[:xxx\] onde xxx é nome do elemento postado pelo seu formulário.
+Os outros métodos são requisitados exatamente da mesma forma como uma rota "get". Você simplesmente usa o "post", "put" ou "delete" que já estarão definidos como uma rota, além do "get" é claro. Para acessar os parâmetros POSTados, use params\[:xxx\] onde xxx é nome do elemento postado pelo seu formulário.
 
     post '/foo' do
-      "você requisitou por foo, com o parametro bar via post igual a #{params[:bar]}"
+      "você requisitou por foo, com o parâmetro bar via post igual a #{params[:bar]}"
     end
 
 
