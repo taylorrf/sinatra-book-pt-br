@@ -148,23 +148,17 @@ Additional note: some documentation sources will have a different format for pas
 FastCGI                         {#deployment_fastcgi}
 -------
 
-The standard method for deployment is to use Thin or Mongrel, and have a
- reverse proxy (lighttpd, nginx, or even Apache) point to your
- bundle of servers.
+O método padrão para fazer deployment é usando Thin ou Mongrel, e ter um proxy reverso (lighttpd, nginx ou mesmo Apache) apontando para o seus servidores.
 
-But that isn't always possible.  Cheaper shared hosting (like Dreamhost) won't
-let you run Thin or Mongrel, or setup reverse proxies (at least on the default
-shared plan).
 
-Luckily, Rack supports various connectors, including CGI and FastCGI.  Unluckily
-for us, FastCGI doesn't quite work with the current Sinatra release.
+Mas nem sempre isto é possível.  Em hosts baratos e compartilhados (como Dreamhost) você não pode ter rodando Thin ou Mongrel, ou configurar proxy reverso (pelo menos no plano padrão compartilhado).
 
-To get a simple 'hello world' Sinatra application up and running on Dreamhost
-involves pulling down the current Sinatra code, and hacking at it a bit.  Don't
-worry though, it only requires commenting out a few lines, and tweaking
-another.
+Felizmente, Rack suporta varias conexões, incluindo CGI e FastCGI.  Infelizmente para nós, FastCGI não trabalha muito bem com a versão atual do Sinatra.
 
-Steps to deploy via FastCGI:
+Para enviar um simples 'hello world' com uma aplicação Sinatra rodando na Dreamhost
+é necessário baixar todo o código atual do Sinatra, e hackear ele um pouco.  Não se preocupe, isto somente requer comentar algumas linhas e ajustar algumas outras.
+
+Passo para um deploy com FastCGI:
 
 * .htaccess
 * dispatch.fcgi
