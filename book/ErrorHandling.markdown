@@ -15,27 +15,27 @@ erros
 -----
 Por default os erros são capturados por Sinatra::ServerError
 
-Sinatra will pass you the error via the ‘sinatra.error’ in request.env
+O Sinatra irá enviar seu erro através do ‘sinatra.error’ no request.env
 
 	error do
-	  'Sorry there was a nasty error - ' + request.env['sinatra.error'].name
+	  'Desculpe mas houve um erro desagradável - ' + request.env['sinatra.error'].name
 	end
 
-Custom error mapping:
+Customizando o error mapping:
 
 	error MyCustomError do
-	  'So what happened was...' + request.env['sinatra.error'].message
+	  'O que acabou de acontecer foi...' + request.env['sinatra.error'].message
 	end
 
-then if this happens:
+se isto acontecer:
 
 	get '/' do
-	  raise MyCustomError, 'something bad'
+	  raise MyCustomError, 'algo terrível'
 	end
 
-you gets this:
+você irá obter isto:
 
-	So what happened was... something bad
+	O que acabou de acontecer foi... algo terrível
 
 Informações Adicionais
 ----------------------
