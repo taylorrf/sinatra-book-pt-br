@@ -3,13 +3,14 @@ Error Handling
 
 not\_found
 ---------
-Remember: These are run inside the Sinatra::EventContext which means you get all the goodies is has to offer (i.e. haml, erb, :halt, etc.)
+Lembre-se: Isto irá rodar sob o Sinatra::EventContext que significa que você poderá te-lo em todos os bons formatos que lhe são oferecidos (i.e. haml, erb, :halt, etc.)
 
-Whenever NotFound is raised this will be called
+Sempre que uma NotFound é levantadas ela é tratada pela seguinte chamada
 
     not_found do
-      'This is nowhere to be found'
+      'Isto esta longe de ser encontrado'
     end
+
 
 erros
 -----
@@ -39,7 +40,7 @@ você irá obter isto:
 
 Informações Adicionais
 ----------------------
-Because Sinatra give you a default not\_found and error do :production that are secure. If you want to customize only for :production but want to keep the friendly helper screens for :development then do this:
+Com Sinatra você pode tornar o padrão de error e not\_found mais seguro em :production. Se você deseja customizar apenas para :production com uma tela mais amigavel do que em :development então faça o seguinte:
 
 	configure :production do
 

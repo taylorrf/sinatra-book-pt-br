@@ -87,33 +87,27 @@ Vamos primeiro olhar um simples caso de uso:
         "Thing is now: #{cookie}"
     end
 
-Setting a path, expiration date, or domain gets a little more complicated - see the source code for set\_cookie if you want to dig deeper.
+Definir um diretório, data de expiração ou dominio requer um pouco mais complicação - veja o código-fonte do set\_cookie se você quiser ir mais mais a fundo.
 
     set_cookie("thing", { :domain => myDomain,
                           :path => myPath,
                           :expires => Date.new } )
 
-That's the easy stuff with cookies - It can also serialize Array objects,
-separating them with ampersands (&), but when they come back, it doesn't
-deserialize or split them in any way, it hands you the raw, encoded string
-for your parsing pleasure.
+Estas são as coisas mais simples com cookies - Você pode também serializar um objeto de Arrays, separando com "e" comercial (&), mas quando obter de volta, terá que desserializar e dividi-lo de qualquer forma, uma grande mão de obra, codificando uma string e depois a parseando-a para o seu prazer.
 
 
 status
 ------
 
-If you want to set your own status response instead of the normal 200 (Success), you can use the `status`-helper to set the
-code, and then still render normally:
+Se você deseja definir seu próprio status para resposta ao invés do convencional 200 (Successo), você pode usar o helper `status`- para definir o código, e ainda assim renderizar normalmente:
 
     get '/' do
       status 404
       "Não funciona"
     end
 
-Alternatively you can use `throw :halt, [404, "Not found"]` to immediately stop any further actions and return the
-specified status code and string to the client. `throw` supports more options in this regard, see the appropriate section
-for more info.
 
+Alternativamente você pode usar `throw :halt, [404, "Not found"]` para imediatamente parar futuras ações e retornar o código de status especificado e uma string para o cliente. `throw` suportam mais opções a respeito disto, consulte o capítulo adequado para mais informações.
 
 autenticação
 --------------
