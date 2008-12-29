@@ -128,14 +128,14 @@ Você pode encontrar documentação adicional sobre Passenger no seu repositóri
         get '/foo/:bar' do
                 "Você requisitou por foo/#{params[:bar]}"
         end
-And that's all there is to it! Once it's all setup, point your browser at your
- domain, and you should see a 'Worked on Dreamhost' page. To restart the
- application after making changes, you need to run `touch tmp/restart.txt`.
 
 
-Please note that currently passenger 2.0.3 has a bug where it can cause Sinatra to not find the view directory. In that case, add `:views => '/path/to/views/'` to the Sinatra options in your Rackup file.
 
-Additional note: some documentation sources will have a different format for passing options to Sinatra in the Rackup file, e.g.:
+E isso é tudo que necessitamos por enquanto! Uma vez tudo configurado, acesse seu dominio, e você já poderá ver a página "Trabalhando na dreamhost". Para reiniciar a aplicação após algumas mudanças, você precisará executar `touch tmp/restart.txt`.
+
+Observe que na versão atual do passenger (2.0.3) existe um bug onde o Sinatra não encontra o diretório das views. Neste caso, adicione a opção `:views => '/diretório/das/views/'` no seu arquivo Rackup do Sinatra.
+
+Nota complementar: algumas documentações terão um formato diferente de passar as opções no arquivo Rackup do Sinatra, como por exemplo:
 
 		Sinatra::Application.default_options.merge!(
 		  :run => false,
@@ -200,20 +200,20 @@ Passo para um deploy com FastCGI:
 
         load 'test.rb'
 
-3. sinatra.rb - Replace this function with the new version here (commenting out the `puts` lines)
+3. sinatra.rb - Modificar esta função com uma nova versão aqui (descomentando as linhas `puts`)
 
         def run
           begin
-            #puts "== Sinatra has taken the stage on port #{port} for #{env} with backup by #{server.name}"
+            #puts "== Sinatra começou os trabalhos na porta #{port} para #{env} apoiado pelo #{server.name}"
             require 'pp'
             server.run(application) do |server|
               trap(:INT) do
                 server.stop
-                #puts "\n== Sinatra has ended his set (crowd applauds)"
+                #puts "\n== Sinatra já terminou sua configuração (e a multidão aplaude)"
               end
             end
           rescue Errno::EADDRINUSE => e
-            #puts "== Someone is already performing on port #{port}!"
+            #puts "== Algo já está sendo executando na porta #{port}!"
           end
         end
 
