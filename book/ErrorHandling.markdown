@@ -40,7 +40,7 @@ você irá obter isto:
 
 Informações Adicionais
 ----------------------
-Com Sinatra você pode tornar o padrão de error e not\_found mais seguro em :production. Se você deseja customizar apenas para :production com uma tela mais amigavel do que em :development então faça o seguinte:
+Com Sinatra você pode tornar o padrão de error e not\_found mais seguro em :production. Se você deseja customizar apenas para :production com uma tela mais amigável do que em :development então faça o seguinte:
 
 	configure :production do
 

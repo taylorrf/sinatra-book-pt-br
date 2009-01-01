@@ -14,7 +14,7 @@ A maneira mais simples de se obter o Sinatra é através da rubygems
 
 Aplicação de exemplo
 -----------
-O Sinatra já está instalado e você esta pronto para experimentá-lo, que tal já construir sua primeira aplicação?
+O Sinatra já está instalado e você esta pronto para experimentá-lo, que tal construir sua primeira aplicação?
 
 	# myapp.rb
 	require 'rubygems'
@@ -29,7 +29,7 @@ Rode isto com o seguinte comando $ ruby myapp.rb e visualize o resultado em http
 Vivendo com as novidades
 --------------------------------
 Querendo viver a vida (ou deveria dizer Sinatra) com as novidades né? Bem, isto é bastante simples.
-As últimas grandes novidades do Sinatra estão no Github; então utilizando os poderes do git e os poderes da sua mente--você poderá fazer o seguinte
+As últimas grandes novidades do Sinatra estão no Github; então utilizando os poderes do git e os poderes da sua mente--você poderá fazer o seguinte:
 
 1. cd local/do/seu/projeto
 2. git clone git://github.com/bmizerany/sinatra.git
@@ -38,12 +38,12 @@ As últimas grandes novidades do Sinatra estão no Github; então utilizando os 
 5. cd seu\_projeto
 6. ln -s ../sinatra
 
-Para utilizar este poder profano, basta adicionar a seguinte linha no arquivo sinatra.rb
+Para usar este poder profano, basta adicionar a seguinte linha no arquivo sinatra.rb:
 
 	$:.unshift File.dirname(__FILE__) + '/sinatra/lib'
 	require 'sinatra'
 
-Isto certamente é viver junto com as últimas novidades
+Isto certamente é viver junto com as últimas novidades.
 
 Sobre este livro
 ---------------
@@ -51,4 +51,7 @@ Este livro assume que você já tem um conhecimento básico da linguagem Ruby e 
 
 Para maiores informações sobre a linguagem Ruby visite o seguinte link:
 
-- http://www.ruby-lang.org
+- [http://www.ruby-lang.org][rubylang]
+
+[rubylang]: http://www.ruby-lang.org/
+

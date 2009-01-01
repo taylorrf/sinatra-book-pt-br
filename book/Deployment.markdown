@@ -13,7 +13,7 @@ Iremos cobrir aqui como realizar o deploy no Sinatra com suporte a proxy reverso
         # Para o Thin:
         gem install thin
 
-2. Crie seu arquivo de rackup - é necessarie que tenha a linha "require 'app'" da sua aplicação Sinatra.
+2. Crie seu arquivo de rackup - é necessario que tenha a linha "require 'app'", equivalente a sua aplicação Sinatra.
 
         require 'app'
 
@@ -78,7 +78,7 @@ Esta feito! Va até o seu dominio "mydomain.com/" e veja o resultado! Tudo pode 
 	}
 
 *Variações* - Mais instâncias Thin - Para adicionar mais instâncias thin, mude o paramêtro `-s 2` no comando de inicialização do thin para a quantos servidores você deseja.
-Então nã se esqueça dos proxies lighttpd adicionando uma nova linha para cada um deles. Após reinicie o lighttpd e tudo irá subir conforme o esperado.
+E não se esqueça dos proxies lighttpd, adicionando uma nova linha para cada um deles. Após, reinicie o lighttpd e tudo irá subir conforme o esperado.
 
 
 
@@ -101,13 +101,13 @@ Você pode encontrar documentação adicional sobre Passenger no seu repositóri
         domain.com/
         domain.com/tmp
         domain.com/public
-        # local para uma versão do sinatra - não necessário se estiver usando gems
+        # local para uma versão do sinatra - não necessário caso estiver usando gems
         domain.com/sinatra
 
 3.  Criando o arquivo de "Rackup" (rack configuration file) `config.ru`
 
         # Este arquivo irá ficar em domain.com/config.ru
-        require 'sinatra/lib/sinatra.rb'   # "require 'sinatra'" caso tiver sido instalado com gems
+        require 'sinatra/lib/sinatra.rb'   # "require 'sinatra'" caso tiver sido instalado via gems
         require 'rubygems'
 
         require 'test.rb' # assuma que o arquivo da sua aplicação Sinatra seja 'test.rb'
@@ -131,7 +131,7 @@ Você pode encontrar documentação adicional sobre Passenger no seu repositóri
 
 
 
-E isso é tudo que necessitamos por enquanto! Uma vez tudo configurado, acesse seu dominio, e você já poderá ver a página "Trabalhando na dreamhost". Para reiniciar a aplicação após algumas mudanças, você precisará executar `touch tmp/restart.txt`.
+E isso é tudo que necessitamos por enquanto! Uma vez tudo configurado, acesse seu dominio e você já poderá ver a página "Trabalhando na dreamhost". Para reiniciar a aplicação após algumas mudanças, você precisará executar `touch tmp/restart.txt`.
 
 Observe que na versão atual do passenger (2.0.3) existe um bug onde o Sinatra não encontra o diretório das views. Neste caso, adicione a opção `:views => '/diretório/das/views/'` no seu arquivo Rackup do Sinatra.
 
@@ -158,7 +158,7 @@ Felizmente, Rack suporta varias conexões, incluindo CGI e FastCGI.  Infelizment
 Para enviar um simples 'hello world' com uma aplicação Sinatra rodando na Dreamhost
 é necessário baixar todo o código atual do Sinatra, e hackear ele um pouco.  Não se preocupe, isto somente requer comentar algumas linhas e ajustar algumas outras.
 
-Passo para um deploy com FastCGI:
+Passos para um deploy com FastCGI:
 
 * .htaccess
 * dispatch.fcgi

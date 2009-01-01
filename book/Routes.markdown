@@ -63,9 +63,9 @@ Os outros métodos são requisitados exatamente da mesma forma como uma rota "ge
 
 os métodos PUT e DELETE
 --------------------------
-Quando os browsers não suportavam nativamente os métodos PUT e DELETE, alguns hacks ou workaround eram adotados pela comunidade web. Bastava adicionar um elemento hidden com o nome "metodo" e o valor igual ao método HTTP que você desejava usar. O formulário continuará sendo enviado como um POST, mas o Sinatra irá interpretá-lo com o método desejado.
+Quando os browsers não suportavam nativamente os métodos PUT e DELETE, alguns hacks ou workaround eram adotados pela comunidade web. Bastava adicionar um elemento hidden com o nome "metodo" e o valor igual ao método HTTP que você desejava usar. O formulário continuará sendo enviado como um POST, porém o Sinatra irá interpretá-lo com o método desejado.
 
-Quando você quiser usar PUT ou DELETE em um formulário com um cliente que não tem suporte (da mesma forma como Curl ou ActiveResorce), simplesmente vá em frente e use-os normalmente, ignorando aquele método citado acima. Aquilo é apenas para "hacks" em apoio aos browsers.
+Quando você quiser usar PUT ou DELETE em um formulário com um browser que não tem suporte (da mesma forma como Curl ou ActiveResorce), simplesmente vá em frente e use-os normalmente, ignorando aquele método citado acima. Aquilo é apenas para "hackear" um suporte aos browsers.
 
 
 como as rotas são requisitadas

@@ -47,17 +47,20 @@ Isto irá renderizar ./views/index.builder
 Isto irá renderizar o xml inline, diretamente do handler.
 
 #### Atom Feed
+em breve
 
 #### RSS Feed
+em breve
+
 
 Layouts
 -------
 Layouts são muito simples no Sinatra. Crie um arquivo em seu diretório de views nomeado como "layout.erb", "layout.haml" ou "layout.builder".  Quando a página renderizar, o layout apropriado será invocado (do mesmo tipo de arquivo) e usado.
 
 
-O layout pode ter no seu contexto um ponto onde é realizada uma chamada para incluir outros conteúdos.
+O layout pode ter no seu contexto um ponto onde será realizada uma chamada para incluir outros conteúdos.
 
-Um exemplo de um layout com haml seria um arquivo parecido com isto:
+Um exemplo de um layout com haml seria um arquivo parecido com este:
 
     %html
       %head
@@ -68,7 +71,7 @@ Um exemplo de um layout com haml seria um arquivo parecido com isto:
 
 evitando um layout
 -----------------
-Algumas vezes você deseja que o layout não seja renderizado. No seu método de renderização simplesmente passe :layout => false, e você será o cara.
+Algumas vezes você deseja que o layout não seja renderizado. No seu método de renderização simplesmente passe :layout => false e você será o cara.
 
     get '/' do
       haml :index, :layout => false
@@ -98,3 +101,4 @@ Experimente!
 
 Partials
 --------
+em breve

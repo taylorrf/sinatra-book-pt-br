@@ -1,7 +1,7 @@
 Rack Middleware
 ===============
 
-Sinatra pode rodar sob [Rack][rack], um padrão mínimo de interface para frameworks web escritos em Ruby. Uma das capacidades mais interessantes do Rack é a de se poder desenvolver uma aplicação sob um “middleware” —  componente localizado entre o servidor e sua aplicação monitorando e/ou manipulando requisições/respostas HTTP fornecendo varias funcionalidades em comuns.
+Sinatra pode rodar sob [Rack][rack], um padrão mínimo de interface para frameworks web escritos em Ruby. Uma das capacidades mais interessantes do Rack é a de se poder desenvolver uma aplicação sob um “middleware” —  componente localizado entre o servidor e sua aplicação monitorando e/ou manipulando requisições/respostas HTTP fornecendo várias funcionalidades em comuns.
 
 Sinatra faz a utilização de um canal Rack middleware através do uso muito fácil de um método de alto nível:
 
@@ -16,7 +16,7 @@ Sinatra faz a utilização de um canal Rack middleware através do uso muito fá
 	end
 
 
-A semântica de "utilização" é idêntica a definida para o [Rack:: Construtor] [rack_builder] DSL (mais frequentemente utilizado a partir do arquivo rackup). Como por exemplo, ao utilizar um método que aceita múltiplos/variáveis argumentos da mesma forma como os blocos:
+A semântica de utilização é idêntica a definida para o [Rack:: Construtor] [rack_builder] DSL (mais frequentemente utilizado a partir do arquivo rackup). Como por exemplo, ao utilizar um método que aceita múltiplos/variáveis argumentos da mesma forma como os blocos:
 
 	use Rack::Auth::Basic do |username, password|
 	   username == 'admin' && password == 'secreto'

@@ -20,16 +20,18 @@ Basicamente é muito fácil:
 
     redirect 'http://www.google.com'
 
-Atualmente o redirect envia de volta para o browser um Location header, e o browser faz a seguinte requisição para o local indicado. Desde que o browser faça a requisição seguinte, você pode redirecionar para outra página, em sua aplicação, ou totalmente para um outro site.
+Atualmente o redirect envia de volta para o browser um Location header e o browser faz a requisição seguinte para o local indicado. Desde que o browser faça a requisição seguinte você poderá redirecionar para outra página em sua aplicação ou totalmente para um outro site.
 
 
-O fluxo de  requests durante um redirect é:
+O fluxo de requests durante um redirect é:
+
 Browser --> Server (redirect to '/') --> Browser (request '/') --> Server (result for '/')
 
-Sinatra envia por padrão o código de resposta 302. Segundo o spec, 302 não pode alterar o método de requisição, mas você vê uma nota na maioria dos clientes dizendo que irá mudar isto. Aparentemente os browsers mobile que as pessoas estão usando fazem as coisas corretamente ( exceto a má interpretação do mainstream).
+
+Sinatra envia por padrão o código de resposta 302. Segundo o spec, 302 não pode alterar o método de requisição, mas você vê uma nota na maioria dos browsers dizendo que irão mudar isto. Aparentemente os browsers mobile que as pessoas estão usando fazem as coisas corretamente ( ao invés de seguir má interpretação da maioria ).
 
 
-A solução disto no spec é enviar 2 diferentes códigos de resposta: 303 e  307. 303 reinicia o GET, 307 mantém o mesmo método.
+A solução para isso no spec é enviar 2 diferentes códigos de resposta: 303 e  307. 303 reinicia o GET, 307 mantém o mesmo método.
 
 Para forçar o sinatra a enviar um código de resposta diferente, é muito simples:
 
@@ -42,26 +44,30 @@ sessões
 
 ### Padrão de Cookie baseado em Sessões
 
-Sinatra possui um suporte básico para cookie baseado em sessão.  Para habilitar isto, no bloco de configuração, ou  no inicio da sua aplicação, você precisa habilitar esta opção.
+Sinatra possui um suporte básico para cookie baseado em sessão.  Para habilitar isso, no bloco de configuração ou  no inicio da sua aplicação, você precisará habilitar a seguinte opção:
 
     enable :sessions
 
-A desvantagem para esta abordagem com sessão é que todos os dados serão armazenados no cookie. Cookies sempre terão um limite de 4 kilobytes, você nao pode armazenar muitos dados. Por outro lado cookies não são inviolaveis. O usuário pode modificar qualquer dado na sua sessão. Mas.... é muito fácil, e não tem problemas de escalonamento de memória ou de banco de dados rodando de backend junto com a sessão.
+A desvantagem desta abordagem com sessão é que todos os dados serão armazenados no cookie. Cookies sempre terão um limite de 4 kilobytes, você nao poderá armazenar muitos dados. Outra questão é que cookies não são invioláveis. O usuário poderá modificar quaisquer dados na sua sessão. Mas.... por ser muito fácil, não terá problemas tendo de escalar memória ou banco de dados para rodar de backend junto com a sessão.
 
 
 ### Memória baseada em sessões
+em breve
 
 ### Memcached baseado em sessões
+em breve
 
 ### Arquivos baseados em sessões
+em breve
 
 ### Banco de dados baseados em sessões
+em breve
 
 
 cookies
 -------
 
-Cookies são bastante simples de se usar no Sinatra, porém com alguns trejeitos.
+Cookies são bastante simples de se usar no Sinatra, porém com algumas ressalvas.
 
 Vamos primeiro olhar um simples caso de uso:
 
@@ -87,13 +93,13 @@ Vamos primeiro olhar um simples caso de uso:
         "Thing is now: #{cookie}"
     end
 
-Definir um diretório, data de expiração ou dominio requer um pouco mais complicação - veja o código-fonte do set\_cookie se você quiser ir mais mais a fundo.
+Definir um diretório, data de expiração ou domínio requer um pouco mais de complicação - veja o código-fonte do set\_cookie se você quiser ir mais a fundo.
 
     set_cookie("thing", { :domain => myDomain,
                           :path => myPath,
                           :expires => Date.new } )
 
-Estas são as coisas mais simples com cookies - Você pode também serializar um objeto de Arrays, separando com "e" comercial (&), mas quando obter de volta, terá que desserializar e dividi-lo de qualquer forma, uma grande mão de obra, codificando uma string e depois a parseando-a para o seu prazer.
+Estas são as coisas mais simples com cookies - Você pode também serializar um objeto de Arrays, separando com "e" comercial (&), mas quando obter de volta, terá que desserializar e dividi-lo de qualquer forma, uma grande mão de obra, codificando uma string e depois parseando-a para o seu prazer.
 
 
 status
@@ -107,8 +113,8 @@ Se você deseja definir seu próprio status para resposta ao invés do convencio
     end
 
 
-Alternativamente você pode usar `throw :halt, [404, "Not found"]` para imediatamente parar futuras ações e retornar o código de status especificado e uma string para o cliente. `throw` suportam mais opções a respeito disto, consulte o capítulo adequado para mais informações.
+Alternativamente você pode usar `throw :halt, [404, "Not found"]` para imediatamente parar futuras ações e retornar o código de status especificado e uma string para o cliente. `throw` suportam mais opções a respeito disto, consulte o capítulo adequado para maiores informações.
 
 autenticação
 --------------
-
+em breve
