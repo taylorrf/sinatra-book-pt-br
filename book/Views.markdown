@@ -50,7 +50,34 @@ Isto irá renderizar o xml inline, diretamente do handler.
 em breve
 
 #### RSS Feed
-em breve
+Suponhamos que a url do site seja http://liftoff.msfc.nasa.gov/.
+
+
+		get '/rss.xml' do
+		  builder do |xml|
+		    xml.instruct! :xml, :version => '1.0'
+		    xml.rss :version => "2.0" do
+		      xml.channel do
+			xml.title "Liftoff News"
+			xml.description "Liftoff to Space Exploration."
+			xml.link "http://liftoff.msfc.nasa.gov/"
+
+			@posts.each do |post|
+			  xml.item do
+			    xml.title post.title
+			    xml.link "http://liftoff.msfc.nasa.gov/posts/#{post.id}"
+			    xml.description post.body
+			    xml.pubDate Time.parse(post.created_at.to_s).rfc822()
+			    xml.guid "http://liftoff.msfc.nasa.gov/posts/#{post.id}"
+			  end
+			end
+		      end
+		    end
+		  end
+		end
+
+Isso irá renderizar o rss inline, diretamente no handler.
+
 
 
 Layouts
