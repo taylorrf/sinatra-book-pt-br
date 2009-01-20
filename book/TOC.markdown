@@ -1,4 +1,5 @@
 CSS: ./book.css
+Title: Sinatra Book - Versão em português
 
 Sumário
 =================
