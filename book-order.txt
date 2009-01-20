@@ -12,6 +12,7 @@ Models.markdown
 Helpers.markdown
 RackMiddleware.markdown
 ErrorHandling.markdown
+Halt.markdown
 Configuration.markdown
 Deployment.markdown
 Contributing.markdown

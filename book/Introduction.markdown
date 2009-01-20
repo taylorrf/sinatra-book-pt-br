@@ -67,7 +67,7 @@ Você pode verificar qual a versão que a aplicação esta utilizando adicionand
 para verificar o resultado acesse `http://localhost:4567/versao`.
 
 
-Clássica aplicação "Hello Word"
+Aplicação "Hello Word"
 -----------------------------
 O Sinatra já está instalado e você esta pronto para experimentá-lo, que tal construir sua primeira aplicação?
 
