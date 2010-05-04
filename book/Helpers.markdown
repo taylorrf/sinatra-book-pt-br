@@ -24,7 +24,7 @@ Exemplo:
 implementando partials no estilo rails
 ------------------------------------
 
-Usar partials em suas views é uma ótima maneira de mante-las limpas. Para que Sinatra possa se aproximar do design de um framework, você terá que implementar um handler de partial nele próprio.
+Usar partials em suas views é uma ótima maneira de mantê-las limpas. Para que Sinatra possa se aproximar do design de um framework, você terá que implementar um handler de partial nele próprio.
 
 
 Eis aqui uma versão realmente básica:
@@ -37,7 +37,7 @@ Eis aqui uma versão realmente básica:
     end
 
 
-Uma versão mais avançada desse handler passando variaveis locais e interando um hash seria algo parecido com isto:
+Uma versão mais avançada desse handler passando variáveis locais e interando um hash seria algo parecido com isto:
 
 
     # Render the page once:

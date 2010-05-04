@@ -11,7 +11,7 @@ Para definir o corpo do resultado com um método helper:
 	throw :halt, :helper_method
 
 
-Define o corpo do resultado com um método helper enviando depois com os parametros do escopo local
+Define o corpo do resultado com um método helper enviando depois com os parâmetros do escopo local
 
 	throw :halt, [:helper_method, foo, bar]
 
@@ -26,12 +26,12 @@ Para definir um status e depois o corpo da mensagem:
 	throw :halt, [401, 'vá embora!']
 
 
-Define o status e então chama o método helper com os parametros do escopo local
+Define o status e então chama o método helper com os parâmetros do escopo local
 
 	throw :halt, [401, [:helper_method, foo, bar]]
 
 
-Roda uma proc na instancia de Sinatra:EventContext e define o corpo do resultado
+Roda uma proc na instância de Sinatra:EventContext e define o corpo do resultado
 
 	throw :halt, lambda { puts 'Na proc!'; 'Eu escrevi ao $stdout!' }
 

@@ -12,9 +12,9 @@ Este filtro é executado em Sinatra::EventContext
   end
 
 
-Manipulação de parametrôs aninhados ao estilo Rails
+Manipulação de parâmetros aninhados ao estilo Rails
 ------------------------------------
-Se você quiser usar um formulário com parametrôs ao estilo deste (aka. Rails' nested params)
+Se você quiser usar um formulário com parâmetros ao estilo deste (aka. Rails' nested params)
 
 		<form>
 		  <input ... name="post[title]" />
@@ -23,7 +23,7 @@ Se você quiser usar um formulário com parametrôs ao estilo deste (aka. Rails'
 		</form>
 
 
-Você deve converter os parametros para um hash. Você pode fazer isso facilmente usando o filtro "before":
+Você deve converter os parâmetros para um hash. Você pode fazer isso facilmente usando o filtro "before":
 
 		before do
 		 new_params = {}
@@ -41,6 +41,6 @@ Você deve converter os parametros para um hash. Você pode fazer isso facilment
 		end
 
 
-Para então se tornarem nos seguintes paramêtros:
+Para então se tornarem nos seguintes parâmetros:
 
 {"post"=>{ "title"=>"", "body"=>"", "author"=>"" }}

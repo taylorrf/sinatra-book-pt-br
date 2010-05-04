@@ -5,7 +5,7 @@ Estrutura
 ---------
 Handler é um termo genérico utilizado pelo Sinatra para "controllers". Um handler é o ponto inicial de entrada para uma nova requisição http em sua aplicação.
 
-Para saber mais sobre rotas, leia o capitúlo Rotas (logo acima deste)
+Para saber mais sobre rotas, leia o capítulo Rotas (logo acima deste)
 
 
 redirect
@@ -33,7 +33,7 @@ Sinatra envia por padrão o código de resposta 302. Segundo o spec, 302 não po
 
 A solução para isso no spec é enviar 2 diferentes códigos de resposta: 303 e  307. 303 reinicia o GET, 307 mantém o mesmo método.
 
-Para forçar o sinatra a enviar um código de resposta diferente, é muito simples:
+Para forçar o Sinatra a enviar um código de resposta diferente, é muito simples:
 
     redirect '/', 303 # força o retorno do código 303
 
@@ -48,7 +48,7 @@ Sinatra possui um suporte básico para cookie baseado em sessão.  Para habilita
 
     enable :sessions
 
-A desvantagem desta abordagem com sessão é que todos os dados serão armazenados no cookie. Cookies sempre terão um limite de 4 kilobytes, você nao poderá armazenar muitos dados. Outra questão é que cookies não são invioláveis. O usuário poderá modificar quaisquer dados na sua sessão. Mas.... por ser muito fácil, não terá problemas tendo de escalar memória ou banco de dados para rodar de backend junto com a sessão.
+A desvantagem desta abordagem com sessão é que todos os dados serão armazenados no cookie. Cookies sempre terão um limite de 4 kilobytes, você não poderá armazenar muitos dados. Outra questão é que cookies não são invioláveis. O usuário poderá modificar quaisquer dados na sua sessão. Mas.... por ser muito fácil, não terá problemas tendo de escalar memória ou banco de dados para rodar de backend junto com a sessão.
 
 
 ### Memória baseada em sessões
@@ -113,7 +113,7 @@ Se você deseja definir seu próprio status para resposta ao invés do convencio
     end
 
 
-Alternativamente você pode usar `throw :halt, [404, "Not found"]` para imediatamente parar futuras ações e retornar o código de status especificado e uma string para o cliente. `throw` suportam mais opções a respeito disto, consulte o capítulo adequado para maiores informações.
+Alternativamente você pode usar `throw :halt, [404, "Not found"]` para imediatamente parar futuras ações e retornar o código de status especificado e uma string para o cliente. `throw` suportam mais opções a respeito disto, consulte o capítulo adequado para mais informações.
 
 autenticação
 --------------

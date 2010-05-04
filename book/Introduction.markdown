@@ -12,7 +12,7 @@ Ele não exige muito sobre sua aplicação, apenas que:
 * será escrito em linguagem de programação Ruby
 * terá URLs
 
-Em Sinatra, você pode escrever pequenas _ad hoc_ aplicações ou maduras e grandes aplicações coma a mesma facilidade.
+Em Sinatra, você pode escrever pequenas _ad hoc_ aplicações ou maduras e grandes aplicações com a mesma facilidade.
 (Veja a seção "Aplicações do mundo real" depois neste livro.)
 
 Você pode utilizar o poder de varias Rubygems e outras bibliotecas para Ruby disponíveis.
@@ -118,7 +118,7 @@ Sobre este livro
 ---------------
 Este livro assume que você já tem um conhecimento básico da linguagem Ruby e sabe como funciona o interpretador Ruby.
 
-Para maiores informações sobre a linguagem Ruby visite os seguintes links:
+Para mais informações sobre a linguagem Ruby visite os seguintes links:
 
 * [http://www.ruby-lang.org][rubylang]
 * [http://www.ruby-lang.org/en/documentation/ruby-from-other-languages/][rubylang-documentation]

@@ -40,7 +40,7 @@ Iremos cobrir aqui como realizar o deploy no Sinatra com suporte a proxy reverso
             max_persistent_conns: 512
             daemonize: true
 
-4. Configure o lighttpd.conf - troque "mydomain" pelo edereço correto. Também marque corretamente a porta primária conforme configurado no  config.yml.
+4. Configure o lighttpd.conf - troque "mydomain" pelo endereço correto. Também marque corretamente a porta primária conforme configurado no  config.yml.
 
          $HTTP["host"] =~ "(www\.)?mydomain\.com"  {
                  proxy.balance = "fair"
@@ -57,7 +57,7 @@ Iremos cobrir aqui como realizar o deploy no Sinatra com suporte a proxy reverso
 
          thin -s 2 -C config.yml -R config.ru start
 
-Esta feito! Va até o seu dominio "mydomain.com/" e veja o resultado! Tudo pode ser configurado agora, verifique também a configuração do seu dominio no seu arquivo lighttpd.conf.
+Está feito! Vá até o seu domínio "mydomain.com/" e veja o resultado! Tudo pode ser configurado agora, verifique também a configuração do seu domínio no seu arquivo lighttpd.conf.
 
 *Variações* - nginx via proxy - O mesmo acesso do proxy pode ser aplicado ao web server nginx
 
@@ -77,23 +77,23 @@ Esta feito! Va até o seu dominio "mydomain.com/" e veja o resultado! Tudo pode 
 
 	}
 
-*Variações* - Mais instâncias Thin - Para adicionar mais instâncias thin, mude o paramêtro `-s 2` no comando de inicialização do thin para a quantos servidores você deseja.
+*Variações* - Mais instâncias Thin - Para adicionar mais instâncias thin, mude o paramêtro `-s 2` no comando de inicialização do thin para quantos servidores você deseja.
 E não se esqueça dos proxies lighttpd, adicionando uma nova linha para cada um deles. Após, reinicie o lighttpd e tudo irá subir conforme o esperado.
 
 
 
 Passenger (mod rails)           {#deployment_passenger}
 ------------------------
-Odeia fazer deployment com FastCGI? Você não esta sozinho.  Pois advinhe só, Passenger tem suporte a Rack;
+Odeia fazer deployment com FastCGI? Você não está sozinho.  Pois advinhe só, Passenger tem suporte a Rack;
 e este livro irá lhe dizer como fazer tudo isso.
 
-Você pode encontrar documentação adicional sobre Passenger no seu repositório no Github.
+Você pode encontrar a documentação adicional sobre Passenger no seu repositório no Github.
 
 1. Configurando através da interface de conta na Dreamhost
 
         Domains -> Manage Domains -> Edit (web hosting column)
         Habilite 'Ruby on Rails Passenger (mod_rails)'
-        Adicione o diretório "public" no campo para diretórios web. Caso você estiver usando 'rails.com', isto irá mudar para 'rails.com/public'
+        Adicione o diretório "public" no campo para diretórios web. Caso você esteja usando 'rails.com', isto irá mudar para 'rails.com/public'
         Salve suas alterações
 
 2. Criando a estrutura de diretórios
@@ -101,13 +101,13 @@ Você pode encontrar documentação adicional sobre Passenger no seu repositóri
         domain.com/
         domain.com/tmp
         domain.com/public
-        # local para uma versão do sinatra - não necessário caso estiver usando gems
+        # local para uma versão do Sinatra - não necessário caso estiver usando gems
         domain.com/sinatra
 
 3.  Criando o arquivo de "Rackup" (rack configuration file) `config.ru`
 
         # Este arquivo irá ficar em domain.com/config.ru
-        require 'sinatra/lib/sinatra.rb'   # "require 'sinatra'" caso tiver sido instalado via gems
+        require 'sinatra/lib/sinatra.rb'   # "require 'sinatra'" caso tenha sido instalado via gems
         require 'rubygems'
 
         require 'test.rb' # assuma que o arquivo da sua aplicação Sinatra seja 'test.rb'
@@ -131,7 +131,7 @@ Você pode encontrar documentação adicional sobre Passenger no seu repositóri
 
 
 
-E isso é tudo que necessitamos por enquanto! Uma vez tudo configurado, acesse seu dominio e você já poderá ver a página "Trabalhando na dreamhost". Para reiniciar a aplicação após algumas mudanças, você precisará executar `touch tmp/restart.txt`.
+E isso é tudo que necessitamos por enquanto! Uma vez tudo configurado, acesse seu domínio e você já poderá ver a página "Trabalhando na dreamhost". Para reiniciar a aplicação após algumas mudanças, você precisará executar `touch tmp/restart.txt`.
 
 Observe que na versão atual do passenger (2.0.3) existe um bug onde o Sinatra não encontra o diretório das views. Neste caso, adicione a opção `:views => '/diretório/das/views/'` no seu arquivo Rackup do Sinatra.
 
@@ -220,7 +220,7 @@ Passos para um deploy com FastCGI:
 Heroku
 ------
 
-[Heroku] já tem um suporte basico para aplicações em Sinatra. Esta é provavelmente a opção mais fácil de deployment desde que configurada corretamente, deploying no heroku torna-se basicamente uma questão de um simples git push.
+[Heroku] já tem um suporte básico para aplicações em Sinatra. Esta é provavelmente a opção mais fácil de deployment desde que configurada corretamente, deploying no heroku torna-se basicamente uma questão de um simples git push.
 
 Passos para deploy no Heroku:
 

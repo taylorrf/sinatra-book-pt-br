@@ -3,9 +3,9 @@ Error Handling
 
 not\_found
 ---------
-Lembre-se: Isto irá rodar sob o Sinatra::EventContext que significa que você poderá te-lo em todos os bons formatos que lhe são oferecidos (i.e. haml, erb, :halt, etc.)
+Lembre-se: Isto irá rodar sob o Sinatra::EventContext que significa que você poderá tê-lo em todos os bons formatos que lhe são oferecidos (i.e. haml, erb, :halt, etc.)
 
-Sempre que uma NotFound é levantadas ela é tratada pela seguinte chamada
+Sempre que uma NotFound é levantada ela é tratada pela seguinte chamada
 
     not_found do
       'Isto esta longe de ser encontrado'
