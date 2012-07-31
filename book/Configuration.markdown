@@ -2,8 +2,9 @@ Configuração
 =============
 
 Use as opções "set" do Sinatra
------------------------------------
-Blocos de configuração não são executados no contexto dos eventos e não possuem acesso as variaveis de instância. Para guardar um pedaço de informação que você queira acessar nas suas rotas, utilize `set`.
+------------------------------
+
+Blocos de configuração não são executados no contexto dos eventos e também não possuem acesso as variáveis de instância. Para guardar uma informação que será acessada em suas rotas, utilize `set`.
 
     configure :development do
       set :dbname, 'devdb'
@@ -13,19 +14,17 @@ Blocos de configuração não são executados no contexto dos eventos e não pos
       set :dbname, 'productiondb'
     end
 
-...
+Você pode consultar o valor definido anteriormente através do símbolo `dbname`, do objeto `options`.
 
     get '/qualbanco' do
-      'Você esta utilizando o banco de dados ' + options.dbname
+      'Você está utilizando o banco de dados: #{options.dbname}'
     end
 
-Arquivo de configuração externa através do bloco de configuração
+Arquivo de configuração externa através de bloco de configuração
 ----------------------------------------------------------------
-em breve
+Em breve
 
 
 Módulo da aplicação / Área de configuração
 ------------------------------------------
-em breve
-
-
+Em breve
